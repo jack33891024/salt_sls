@@ -1,0 +1,35 @@
+base-install:
+  pkg.installed:
+  - pkgs:
+    - epel-release
+    - gcc
+    - gcc-c++
+    - glibc
+    - make
+    - autoconf
+    - openssl
+    - openssl-devel
+    - pcre
+    - pcre-devel
+    - screen
+    - lrzsz
+    - tree
+    - openssl
+    - openssl-devel
+    - telnet
+    - iftop
+    - iotop
+    - sysstat
+    - wget
+    - dos2unix
+    - lsof
+    - mtr
+    - net-tools
+    - unzip
+    - zip
+    - vim-enhanced
+    - bind-utils
+    - zlib
+    - zlib-devel
+    - nmap
+    - jq

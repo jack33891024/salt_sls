@@ -1,0 +1,53 @@
+# /etc/hosts解析
+192.168.56.250 jps
+192.168.56.10  management
+192.168.56.21  proxy-east-1
+192.168.56.22  proxy-east-2
+192.168.56.31  web-east-1
+192.168.56.32  web-east-2
+192.168.56.41  cache-east-1
+192.168.56.42  cache-east-2
+192.168.56.51  db-east-1
+192.168.56.52  db-east-2
+
+# 各节点grains(/etc/salt/grains)定义
+jps:
+	arch: transfer
+	role: jps
+management:
+	arch: control
+	role: management
+proxy-east-1:
+	arch: proxy
+	role: proxy-east-1
+proxy-east-2:
+	arch: proxy
+	role: proxy-east-2
+web-east-1:
+	arch: web
+	role: web-east-1
+web-east-2:
+	arch: web
+	role: web-east-2
+cache-east-1:
+	arch: cache
+	role: cache-east-1
+cache-east-2:
+	arch: cache
+	role: cache-east-2
+db-east-1:
+	arch: db
+	role: db-east-1
+db-east-2:
+	arch: db
+	role: db-east-2
+
+# grains和pillar环境定义
+# base环境用于系统初始化,常用服务daemon(如zabbix)
+# test(举例)环境用于相关应用运行环境构建,如MySQL,Nginx,PHP,KeepAlived,Haproxy等
+grains:
+	base: /srv/salt/base
+	test: /srv/salt/test
+pillar:
+	base: /srv/pillar/base
+ 	test: /srv/pillar/test

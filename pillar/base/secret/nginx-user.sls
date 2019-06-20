@@ -1,0 +1,2 @@
+nginx-user:
+  User: nginx
